@@ -1,0 +1,11 @@
+{
+  "name": "edgeone-douyin-parser",
+  "version": "1.0.0",
+  "description": "A Douyin video parser with anti-hotlinking bypass using EdgeOne Pages Functions.",
+  "private": true,
+  "scripts": {
+    "start": "echo 'Deploy to EdgeOne Pages to run.'"
+  },
+  "author": "",
+  "license": "ISC"
+}

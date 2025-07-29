@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抖音视频解析 (EdgeOne 版)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>抖音视频解析</h1>
+            <p>粘贴分享口令，自动提取链接并解析</p>
+        </header>
+
+        <main>
+            <div class="input-area">
+                <textarea id="share-input" placeholder="例如: 8.74 复制打开抖音，看看【楊涛的作品】中国人的含蓄... https://v.douyin.com/JTmavpxMkxA/"></textarea>
+                <button id="parse-button">立即解析</button>
+            </div>
+
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>正在努力解析中...</p>
+            </div>
+
+            <div id="error-message" class="hidden"></div>
+
+            <div id="result-container" class="hidden">
+                <div class="video-wrapper">
+                    <div id="dplayer"></div>
+                    <a id="download-button" class="button" href="#" download="douyin_video.mp4">下载视频</a>
+                </div>
+
+                <div class="link-info">
+                    <h3>原始链接 (会跳转)</h3>
+                    <div class="link-wrapper">
+                        <span id="original-link"></span>
+                        <button id="copy-button">复制</button>
+                    </div>
+                </div>
+
+                <div class="video-info">
+                    <h2>视频信息</h2>
+                    <p id="video-title"><strong>标题：</strong><span></span></p>
+                    <p id="video-author"><strong>作者：</strong><span></span></p>
+                    <p id="video-stats">
+                        <span><strong id="like-count"></strong> 点赞</span> |
+                        <span><strong id="comment-count"></strong> 评论</span> |
+                        <span><strong id="share-count"></strong> 分享</span>
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by EdgeOne & DPlayer</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
