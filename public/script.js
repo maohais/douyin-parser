@@ -65,9 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function extractUrl(text) {
-        // --- 修复点 ---
-        // 在字符集中添加了 '-'，以匹配包含连字符的链接
-        const regex = /(https?:\/\/v\.douyin\.com\/[a-zA-Z0-9-]+)/;
+        const regex = /(https?:\/\/v\.douyin\.com\/[a-zA-Z0-9-_]+)/;
         const match = text.match(regex);
         return match ? match[0] : null;
     }
